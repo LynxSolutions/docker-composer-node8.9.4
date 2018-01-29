@@ -15,7 +15,7 @@ RUN echo "deb http://ftp.us.debian.org/debian testing main contrib non-free" >> 
 RUN apt-get update && apt-get install -y git rsync bzip2  yarn=0.23.2-1 \
     && rm -r /var/lib/apt/lists/*
 
-# Global install gulp and bower
+# Global install gulp and angular
 RUN npm set progress=false && \
 	npm install -g gulp @angular/cli && \
 	printf '\n%s' 'registry = http://nexus.lynxsolutions.eu/repository/npm/' >> /root/.npmrc && \
